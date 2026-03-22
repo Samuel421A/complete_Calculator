@@ -76,4 +76,28 @@ public class Calculator {
             System.out.println(firstNumber + " ÷ " + secondNumber + " = " + divisao);
         }
     }
+
+    public double lerDouble(Scanner scanner, String mensagem) {
+        while (true) {
+            System.out.println(mensagem);
+            if (scanner.hasNextDouble()) {
+                return scanner.nextDouble();
+            } else {
+                System.out.println("ERRO! VALOR INVÁLIDO!");
+                scanner.nextLine();
+            }
+        }
+    }
+
+    public int lerInteiros(Scanner scanner, String mensagem) {
+        while (true) {
+            System.out.println(mensagem);
+            if (scanner.hasNextInt()) {
+                return scanner.nextInt();
+            } else {
+                System.out.println("ERRO! DIGITE UM VALOR INTEIRO!");
+                scanner.nextLine();
+            }
+        }
+    }
 }
