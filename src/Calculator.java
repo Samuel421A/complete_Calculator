@@ -13,6 +13,14 @@ public class Calculator {
         return option;
     }
 
+    public void setOption(int option) {
+        this.option = option;
+    }
+
+    public Scanner getScanner() {
+        return scanner;
+    }
+
     public void login() {
         System.out.println("----------------------------------------");
         System.out.println("PARA PROSSEGUIR, VAMOS FAZER O SEU LOGIN");
@@ -47,8 +55,6 @@ public class Calculator {
         System.out.println("[7] JUROS COMPOSTOS");
         System.out.println("[8] SAIR");
         System.out.println("----------------------------------");
-        System.out.println("ESCOLHA UMA DAS OPÇÕES ACIMA:");
-        option = scanner.nextInt();
     }
 
     public void askNumbers() {
