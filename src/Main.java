@@ -51,18 +51,11 @@ public class Main {
 
             case 7:
                 Scanner scanner = new Scanner(System.in);
-                double value = 0;
-                double tax = 0;
-                int period = 0;
-
 
                 System.out.println("DIGITE OS VALORES NECESSÁRIOS:");
-                System.out.println("Valor: ");
-                value = scanner.nextDouble();
-                System.out.println("Taxa: ");
-                tax = scanner.nextDouble();
-                System.out.println("Tempo: ");
-                period = scanner.nextInt();
+                double value = calculator.lerDouble(scanner, "Valor:");
+                double tax = calculator.lerDouble(scanner, "Taxa: ");
+                int period = calculator.lerInteiros(scanner, "Tempo:");
 
                 double compoundTax = tax / 100;
                 double montante = value * Math.pow(1 + compoundTax, period);
